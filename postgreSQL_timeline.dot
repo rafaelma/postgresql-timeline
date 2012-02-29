@@ -1,0 +1,580 @@
+/* 
+ * ==================================
+ * Timeline of the postgreSQL project
+ * ==================================
+ *
+ * File: postgreSQL_timeline.dot
+ *
+ * Author: Rafael Martinez Guerrero / PostgreSQL-es
+ * E-mail: rafael@postgresql.org.es
+ * Web: http://www.postgresql.org.es/
+ *
+ * GIT repository: http://www.github.org/rafaelma/postgresql_timeline
+ *
+ */
+
+digraph postgreSQL_timeline {
+ imap=yes;
+ rankdir=TB;
+
+graph [
+ fontname = "Helvetica"
+ fontsize=30
+ label="Timeline of the postgreSQL project"
+ labelloc=t
+]
+
+
+/* date <-> versions ranks */
+
+ {rank=same; "1995-05-01" "Postgres95-0.01"}
+ {rank=same; "1995-05-25" "Postgres95-0.02"}
+ {rank=same; "1995-07-21" "Postgres95-0.03"}
+ {rank=same; "1995-09-05" "Postgres-1.0"}
+ {rank=same; "1996-02-23" "Postgres-1.01"}
+ {rank=same; "1996-08-01" "Postgres-1.02"}
+ {rank=same; "1996-11-04" "Postgres-1.09"}
+ {rank=same; "1997-01-29" "6.0"}
+ {rank=same; "1997-06-08" "6.1"}
+ {rank=same; "1997-07-22" "6.1.1"}
+ {rank=same; "1997-10-02" "6.2"}
+ {rank=same; "1997-10-17" "6.2.1"}
+ {rank=same; "1998-03-01" "6.3"}
+ {rank=same; "1998-03-23" "6.3.1"}
+ {rank=same; "1998-04-07" "6.3.2"}
+ {rank=same; "1998-10-30" "6.4"}
+ {rank=same; "1998-12-18" "6.4.1"}
+ {rank=same; "1998-12-20" "6.4.2"}
+ {rank=same; "1999-06-09" "6.5"}
+ {rank=same; "1999-07-15" "6.5.1"}
+ {rank=same; "1999-09-15" "6.5.2"}
+ {rank=same; "1999-10-13" "6.5.3"}
+ {rank=same; "2000-05-08" "7.0"}
+ {rank=same; "2000-06-01" "7.0.1"}
+ {rank=same; "2000-06-05" "7.0.2"}
+ {rank=same; "2000-11-11" "7.0.3"}
+ {rank=same; "2001-04-13" "7.1"}
+ {rank=same; "2001-05-05" "7.1.1"}
+ {rank=same; "2001-05-11" "7.1.2"}
+ {rank=same; "2001-08-15" "7.1.3"}
+ {rank=same; "2002-02-04" "7.2"}
+ {rank=same; "2002-03-21" "7.2.1"}
+ {rank=same; "2002-08-23" "7.2.2"}
+ {rank=same; "2002-10-01" "7.2.3"}
+ {rank=same; "2002-11-27" "7.3"}
+ {rank=same; "2002-12-18" "7.3.1"}
+ {rank=same; "2003-01-30" "7.2.4"}
+ {rank=same; "2003-02-04" "7.3.2"}
+ {rank=same; "2003-05-22" "7.3.3"}
+ {rank=same; "2003-07-24" "7.3.4"}
+ {rank=same; "2003-11-17" "7.4"}
+ {rank=same; "2003-12-03" "7.3.5"}
+ {rank=same; "2003-12-22" "7.4.1"}
+ {rank=same; "2004-03-02" "7.3.6"}
+ {rank=same; "2004-03-08" "7.4.2"}
+ {rank=same; "2004-06-14" "7.4.3"}
+ {rank=same; "2004-08-16" "7.4.4" "7.3.7" "7.2.5"}
+ {rank=same; "2004-08-18" "7.4.5"}
+ {rank=same; "2004-10-22" "7.4.6" "7.3.8" "7.2.6"}
+ {rank=same; "2005-01-19" "8.0"}
+ {rank=same; "2005-01-31" "8.0.1" "7.4.7" "7.3.9" "7.2.7"}
+ {rank=same; "2005-04-07" "8.0.2"}
+ {rank=same; "2005-05-09" "8.0.3" "7.4.8" "7.3.10" "7.2.8"}
+ {rank=same; "2005-10-04" "8.0.4" "7.4.9" "7.3.11"}
+ {rank=same; "2005-11-08" "8.1"}
+ {rank=same; "2005-12-12" "8.1.1" "8.0.5" "7.4.10" "7.3.12"}
+ {rank=same; "2006-01-09" "8.1.2" "8.0.6" "7.4.11" "7.3.13"}
+ {rank=same; "2006-02-14" "8.1.3" "8.0.7" "7.4.12" "7.3.14"}
+ {rank=same; "2006-05-23" "8.1.4" "8.0.8" "7.4.13" "7.3.15"}
+ {rank=same; "2006-10-16" "8.1.5" "8.0.9" "7.4.14" "7.3.16"}
+ {rank=same; "2006-12-05" "8.2"}
+ {rank=same; "2007-01-08" "8.2.1" "8.1.6" "8.0.10" "7.4.15" "7.3.17"}
+ {rank=same; "2007-02-05" "8.2.2" "8.1.7" "8.0.11" "7.4.16" "7.3.18"}
+ {rank=same; "2007-02-07" "8.2.3" "8.1.8" "8.0.12"}
+ {rank=same; "2007-04-23" "8.2.4" "8.1.9" "8.0.13" "7.4.17" "7.3.19"}
+ {rank=same; "2007-09-17" "8.2.5" "8.1.10" "8.0.14" "7.4.18" "7.3.20"}
+ {rank=same; "2008-01-07" "8.2.6" "8.1.11" "8.0.15" "7.4.19" "7.3.21"}
+ {rank=same; "2008-02-04" "8.3"}
+ {rank=same; "2008-03-17" "8.3.1"  "8.2.7"}
+ {rank=same; "2008-06-12" "8.3.3" "8.2.9" "8.1.13" "8.0.17" "7.4.21"}
+ {rank=same; "2008-09-22" "8.3.4" "8.2.10" "8.1.14" "8.0.18" "7.4.22"}
+ {rank=same; "2008-11-03" "8.3.5" "8.2.11" "8.1.15" "8.0.19" "7.4.23"}
+ {rank=same; "2009-02-02" "8.3.6" "8.2.12" "8.1.16" "8.0.20" "7.4.24"}
+ {rank=same; "2009-03-16" "8.3.7" "8.2.13" "8.1.17" "8.0.21" "7.4.25"}
+ {rank=same; "2009-07-01" "8.4"}
+ {rank=same; "2009-09-09" "8.4.1" "8.3.8" "8.2.14" "8.1.18" "8.0.22" "7.4.26"}
+ {rank=same; "2009-12-14" "8.4.2" "8.3.9" "8.2.15" "8.1.19" "8.0.23" "7.4.27"}
+ {rank=same; "2010-03-15" "8.4.3" "8.3.10" "8.2.16" "8.1.20" "8.0.24" "7.4.28"}
+ {rank=same; "2010-05-17" "8.4.4" "8.3.11" "8.2.17" "8.1.21" "8.0.25" "7.4.29"}
+ {rank=same; "2010-09-20" "9.0"}
+ {rank=same; "2010-10-04" "9.0.1" "8.4.5" "8.3.12" "8.2.18" "8.1.22" "8.0.26" "7.4.30"}
+ {rank=same; "2010-12-16" "9.0.2" "8.4.6" "8.3.13" "8.2.19" "8.1.23"}
+ {rank=same; "2011-01-31" "9.0.3" "8.4.7" "8.3.14" "8.2.20"}
+ {rank=same; "2011-04-18" "9.0.4" "8.4.8" "8.3.15" "8.2.21"}
+ {rank=same; "2011-09-12" "9.1"}
+ {rank=same; "2011-09-26" "9.1.1" "9.0.5" "8.4.9" "8.3.16" "8.2.22"}
+ {rank=same; "2011-12-05" "9.1.2" "9.0.6" "8.4.10" "8.3.17" "8.2.23"}
+ {rank=same; "2012-02-27" "9.1.3" "9.0.7" "8.4.11" "8.3.18"}
+
+/* Date node attributes */
+
+ "[ 1995 ]" [fontsize=16, fontname="Helvetica", shape = plaintext];
+ "1995-05-01" [fontsize=12, fontname="Helvetica", shape = plaintext];
+ "1995-05-25" [fontsize=12, fontname="Helvetica", shape = plaintext];
+ "1995-07-21" [fontsize=12, fontname="Helvetica", shape = plaintext];
+ "1995-09-05" [fontsize=12, fontname="Helvetica", shape = plaintext];
+
+ "[ 1996 ]" [fontsize=16, fontname="Helvetica", shape = plaintext];
+ "1996-02-23" [fontsize=12, fontname="Helvetica", shape = plaintext];
+ "1996-08-01" [fontsize=12, fontname="Helvetica", shape = plaintext];
+ "1996-11-04" [fontsize=12, fontname="Helvetica", shape = plaintext];
+
+ "[ 1997 ]" [fontsize=16, fontname="Helvetica", shape = plaintext];
+ "1997-01-29" [fontsize=12, fontname="Helvetica", shape = plaintext];
+ "1997-06-08" [fontsize=12, fontname="Helvetica", shape = plaintext];
+ "1997-07-22" [fontsize=12, fontname="Helvetica", shape = plaintext];
+ "1997-10-02" [fontsize=12, fontname="Helvetica", shape = plaintext];
+ "1997-10-17" [fontsize=12, fontname="Helvetica", shape = plaintext];
+
+ "[ 1998 ]" [fontsize=16, fontname="Helvetica", shape = plaintext];
+ "1998-03-01" [fontsize=12, fontname="Helvetica", shape = plaintext];
+ "1998-03-23" [fontsize=12, fontname="Helvetica", shape = plaintext];
+ "1998-04-07" [fontsize=12, fontname="Helvetica", shape = plaintext];
+ "1998-10-30" [fontsize=12, fontname="Helvetica", shape = plaintext];
+ "1998-12-18" [fontsize=12, fontname="Helvetica", shape = plaintext];
+ "1998-12-20" [fontsize=12, fontname="Helvetica", shape = plaintext];
+
+ "[ 1999 ]" [fontsize=16, fontname="Helvetica", shape = plaintext];
+ "1999-06-09" [fontsize=12, fontname="Helvetica", shape = plaintext];
+ "1999-07-15" [fontsize=12, fontname="Helvetica", shape = plaintext];
+ "1999-09-15" [fontsize=12, fontname="Helvetica", shape = plaintext];
+ "1999-10-13" [fontsize=12, fontname="Helvetica", shape = plaintext];
+
+ "[ 2000 ]" [fontsize=16, fontname="Helvetica", shape = plaintext];
+ "2000-05-08" [fontsize=12, fontname="Helvetica", shape = plaintext];
+ "2000-06-01" [fontsize=12, fontname="Helvetica", shape = plaintext];
+ "2000-06-05" [fontsize=12, fontname="Helvetica", shape = plaintext];
+ "2000-11-11" [fontsize=12, fontname="Helvetica", shape = plaintext];
+
+ "[ 2001 ]" [fontsize=16, fontname="Helvetica", shape = plaintext];
+ "2001-04-13" [fontsize=12, fontname="Helvetica", shape = plaintext];
+ "2001-05-05" [fontsize=12, fontname="Helvetica", shape = plaintext];
+ "2001-05-11" [fontsize=12, fontname="Helvetica", shape = plaintext];
+ "2001-08-15" [fontsize=12, fontname="Helvetica", shape = plaintext];
+
+ "[ 2002 ]" [fontsize=16, fontname="Helvetica", shape = plaintext];
+ "2002-02-04" [fontsize=12, fontname="Helvetica", shape = plaintext];
+ "2002-03-21" [fontsize=12, fontname="Helvetica", shape = plaintext];
+ "2002-08-23" [fontsize=12, fontname="Helvetica", shape = plaintext];
+ "2002-10-01" [fontsize=12, fontname="Helvetica", shape = plaintext];
+ "2002-11-27" [fontsize=12, fontname="Helvetica", shape = plaintext];
+ "2002-12-18" [fontsize=12, fontname="Helvetica", shape = plaintext];
+
+ "[ 2003 ]" [fontsize=16, fontname="Helvetica", shape = plaintext];
+ "2003-01-30" [fontsize=12, fontname="Helvetica", shape = plaintext];
+ "2003-02-04" [fontsize=12, fontname="Helvetica", shape = plaintext];
+ "2003-05-22" [fontsize=12, fontname="Helvetica", shape = plaintext];
+ "2003-07-24" [fontsize=12, fontname="Helvetica", shape = plaintext];
+ "2003-11-17" [fontsize=12, fontname="Helvetica", shape = plaintext];
+ "2003-12-03" [fontsize=12, fontname="Helvetica", shape = plaintext];
+ "2003-12-22" [fontsize=12, fontname="Helvetica", shape = plaintext];
+
+ "[ 2004 ]" [fontsize=16, fontname="Helvetica", shape = plaintext];
+ "2004-03-02" [fontsize=12, fontname="Helvetica", shape = plaintext];
+ "2004-03-08" [fontsize=12, fontname="Helvetica", shape = plaintext];
+ "2004-06-14" [fontsize=12, fontname="Helvetica", shape = plaintext];
+ "2004-08-16" [fontsize=12, fontname="Helvetica", shape = plaintext];
+ "2004-08-18" [fontsize=12, fontname="Helvetica", shape = plaintext];
+ "2004-10-22" [fontsize=12, fontname="Helvetica", shape = plaintext];
+
+ "[ 2005 ]" [fontsize=16, fontname="Helvetica", shape = plaintext];
+ "2005-01-19" [fontsize=12, fontname="Helvetica", shape = plaintext];
+ "2005-01-31" [fontsize=12, fontname="Helvetica", shape = plaintext];
+ "2005-04-07" [fontsize=12, fontname="Helvetica", shape = plaintext];
+ "2005-05-09" [fontsize=12, fontname="Helvetica", shape = plaintext];
+ "2005-10-04" [fontsize=12, fontname="Helvetica", shape = plaintext];
+ "2005-11-08" [fontsize=12, fontname="Helvetica", shape = plaintext];
+ "2005-12-12" [fontsize=12, fontname="Helvetica", shape = plaintext];
+
+ "[ 2006 ]" [fontsize=16, fontname="Helvetica", shape = plaintext];
+ "2006-01-09" [fontsize=12, fontname="Helvetica", shape = plaintext];
+ "2006-02-14" [fontsize=12, fontname="Helvetica", shape = plaintext];
+ "2006-05-23" [fontsize=12, fontname="Helvetica", shape = plaintext];
+ "2006-10-16" [fontsize=12, fontname="Helvetica", shape = plaintext];
+ "2006-12-05" [fontsize=12, fontname="Helvetica", shape = plaintext];
+
+ "[ 2007 ]" [fontsize=16, fontname="Helvetica", shape = plaintext];
+ "2007-01-08" [fontsize=12, fontname="Helvetica", shape = plaintext];
+ "2007-02-05" [fontsize=12, fontname="Helvetica", shape = plaintext];
+ "2007-02-07" [fontsize=12, fontname="Helvetica", shape = plaintext];
+ "2007-04-23" [fontsize=12, fontname="Helvetica", shape = plaintext];
+ "2007-09-17" [fontsize=12, fontname="Helvetica", shape = plaintext];
+
+ "[ 2008 ]" [fontsize=16, fontname="Helvetica", shape = plaintext];
+ "2008-01-07" [fontsize=12, fontname="Helvetica", shape = plaintext];
+ "2008-02-04" [fontsize=12, fontname="Helvetica", shape = plaintext];
+ "2008-03-17" [fontsize=12, fontname="Helvetica", shape = plaintext];
+ "2008-06-12" [fontsize=12, fontname="Helvetica", shape = plaintext];
+ "2008-09-22" [fontsize=12, fontname="Helvetica", shape = plaintext];
+ "2008-11-03" [fontsize=12, fontname="Helvetica", shape = plaintext];
+
+ "[ 2009 ]" [fontsize=16, fontname="Helvetica", shape = plaintext];
+ "2009-02-02" [fontsize=12, fontname="Helvetica", shape = plaintext];
+ "2009-03-16" [fontsize=12, fontname="Helvetica", shape = plaintext];
+ "2009-07-01" [fontsize=12, fontname="Helvetica", shape = plaintext];
+ "2009-09-09" [fontsize=12, fontname="Helvetica", shape = plaintext];
+ "2009-12-14" [fontsize=12, fontname="Helvetica", shape = plaintext];
+
+ "[ 2010 ]" [fontsize=16, fontname="Helvetica", shape = plaintext];
+ "2010-03-15" [fontsize=12, fontname="Helvetica", shape = plaintext];
+ "2010-05-17" [fontsize=12, fontname="Helvetica", shape = plaintext];
+ "2010-09-20" [fontsize=12, fontname="Helvetica", shape = plaintext];
+ "2010-10-04" [fontsize=12, fontname="Helvetica", shape = plaintext];
+ "2010-12-16" [fontsize=12, fontname="Helvetica", shape = plaintext];
+
+ "[ 2011 ]" [fontsize=16, fontname="Helvetica", shape = plaintext];
+ "2011-01-31" [fontsize=12, fontname="Helvetica", shape = plaintext];
+ "2011-04-18" [fontsize=12, fontname="Helvetica", shape = plaintext];
+ "2011-09-12" [fontsize=12, fontname="Helvetica", shape = plaintext];
+ "2011-09-26" [fontsize=12, fontname="Helvetica", shape = plaintext];
+ "2011-12-05" [fontsize=12, fontname="Helvetica", shape = plaintext];
+
+ "[ 2012 ]" [fontsize=16, fontname="Helvetica", shape = plaintext];
+ "2012-02-27" [fontsize=12, fontname="Helvetica", shape = plaintext];
+
+
+/* Version node attributes */
+
+/* Mayor versions */
+
+ "9.1" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="deepskyblue4", URL="http://www.postgresql.org/docs/current/static/release-9-1.html"];
+ "9.0" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="deepskyblue4", URL="http://www.postgresql.org/docs/current/static/release-9-0.html"];
+ "8.4" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="deepskyblue4", URL="http://www.postgresql.org/docs/current/static/release-8-4.html"]; 
+ "8.3" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="deepskyblue4", URL="http://www.postgresql.org/docs/current/static/release-8-3.html"]; 
+ "8.2" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="deepskyblue4", URL="http://www.postgresql.org/docs/current/static/release-8-2.html"]; 
+ "8.1" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="deepskyblue4", URL="http://www.postgresql.org/docs/current/static/release-8-1.html"]; 
+ "8.0" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="deepskyblue4", URL="http://www.postgresql.org/docs/current/static/release-8-0.html"]; 
+ "7.4" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="deepskyblue4", URL="http://www.postgresql.org/docs/current/static/release-7-4.html"]; 
+ "7.3" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="deepskyblue4", URL="http://www.postgresql.org/docs/current/static/release-7-3.html"]; 
+ "7.2" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="deepskyblue4", URL="http://www.postgresql.org/docs/current/static/release-7-2.html"];
+ "7.1" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="deepskyblue4", URL="http://www.postgresql.org/docs/current/static/release-7-1.html"]; 
+ "7.0" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="deepskyblue4", URL="http://www.postgresql.org/docs/current/static/release-7-0.html"];
+ "6.5" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="deepskyblue4", URL="http://www.postgresql.org/docs/current/static/release-6-5.html"];
+ "6.4" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="deepskyblue4", URL="http://www.postgresql.org/docs/current/static/release-6-4.html"]; 
+ "6.3" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="deepskyblue4", URL="http://www.postgresql.org/docs/current/static/release-6-3.html"]; 
+ "6.2" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="deepskyblue4", URL="http://www.postgresql.org/docs/current/static/release-6-2.html"]; 
+ "6.1" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="deepskyblue4", URL="http://www.postgresql.org/docs/current/static/release-6-1.html"];
+ "6.0" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="deepskyblue4", URL="http://www.postgresql.org/docs/current/static/release-6-0.html"];
+ "Postgres-1.0" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="deepskyblue4", URL="http://www.postgresql.org/docs/current/static/release-1-0.html"];
+ "Postgres95-0.01" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="deepskyblue4", URL="http://www.postgresql.org/docs/current/static/release-0-01.html"];
+
+/* Minor versions */
+ 
+ "9.1.3" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-9-1-3.html"];
+ "9.1.2" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-9-1-2.html"];
+ "9.1.1" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-9-1-1.html"];
+ 
+ "9.0.7" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-9-0-7.html"];
+ "9.0.6" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-9-0-6.html"];
+ "9.0.5" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-9-0-5.html"];
+ "9.0.4" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-9-0-4.html"];
+ "9.0.3" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-9-0-3.html"];
+ "9.0.2" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-9-0-2.html"];
+ "9.0.1" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-9-0-1.html"];
+
+ "8.4.11" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-8-4-11.html"];
+ "8.4.10" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-8-4-10.html"];
+ "8.4.9" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-8-4-9.html"];
+ "8.4.8" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-8-4-8.html"];
+ "8.4.7" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-8-4-7.html"];
+ "8.4.6" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-8-4-6.html"];
+ "8.4.5" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-8-4-5.html"];
+ "8.4.4" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-8-4-4.html"];
+ "8.4.3" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-8-4-3.html"];
+ "8.4.2" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-8-4-2.html"];
+ "8.4.1" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-8-4-1.html"];
+
+ "8.3.18" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-8-3-18.html"];
+ "8.3.17" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-8-3-17.html"];
+ "8.3.16" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-8-3-16.html"];
+ "8.3.15" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-8-3-15.html"];
+ "8.3.14" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-8-3-14.html"];
+ "8.3.13" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-8-3-13.html"];
+ "8.3.12" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-8-3-12.html"];
+ "8.3.11" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-8-3-11.html"];
+ "8.3.10" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-8-3-10.html"];
+ "8.3.9" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-8-3-9.html"];
+ "8.3.8" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-8-3-8.html"];
+ "8.3.7" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-8-3-7.html"];
+ "8.3.6" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-8-3-6.html"];
+ "8.3.5" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-8-3-5.html"];
+ "8.3.4" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-8-3-4.html"];
+ "8.3.3" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-8-3-3.html"];
+ "8.3.1" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-8-3-1.html"];
+
+ "8.2.23" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-8-2-23.html"];
+ "8.2.22" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-8-2-22.html"];
+ "8.2.21" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-8-2-21.html"];
+ "8.2.20" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-8-2-20.html"];
+ "8.2.19" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-8-2-19.html"];
+ "8.2.18" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-8-2-18.html"];
+ "8.2.17" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-8-2-17.html"];
+ "8.2.16" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-8-2-16.html"];
+ "8.2.15" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-8-2-15.html"];
+ "8.2.14" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-8-2-14.html"];
+ "8.2.13" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-8-2-13.html"];
+ "8.2.12" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-8-2-12.html"];
+ "8.2.11" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-8-2-11.html"];
+ "8.2.10" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-8-2-10.html"];
+ "8.2.9" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-8-2-9.html"];
+ "8.2.7" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-8-2-7.html"];
+ "8.2.6" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-8-2-6.html"];
+ "8.2.5" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-8-2-5.html"];
+ "8.2.4" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-8-2-4.html"];
+ "8.2.3" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-8-2-3.html"];
+ "8.2.2" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-8-2-2.html"];
+ "8.2.1" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-8-2-1.html"];
+
+ "8.1.23" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-8-1-23.html"];
+ "8.1.22" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-8-1-22.html"];
+ "8.1.21" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-8-1-21.html"];
+ "8.1.20" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-8-1-20.html"];
+ "8.1.19" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-8-1-19.html"];
+ "8.1.18" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-8-1-18.html"];
+ "8.1.17" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-8-1-17.html"];
+ "8.1.16" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-8-1-16.html"];
+ "8.1.15" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-8-1-15.html"];
+ "8.1.14" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-8-1-14.html"];
+ "8.1.13" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-8-1-13.html"];
+ "8.1.11" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-8-1-11.html"];
+ "8.1.10" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-8-1-10.html"];
+ "8.1.9" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-8-1-9.html"];
+ "8.1.8" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-8-1-8.html"];
+ "8.1.7" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-8-1-7.html"];
+ "8.1.6" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-8-1-6.html"];
+ "8.1.5" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-8-1-5.html"];
+ "8.1.4" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-8-1-4.html"];
+ "8.1.3" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-8-1-3.html"];
+ "8.1.2" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-8-1-2.html"];
+ "8.1.1" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-8-1-1.html"];
+
+ "8.0.26" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-8-0-26.html"];
+ "8.0.25" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-8-0-25.html"];
+ "8.0.24" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-8-0-24.html"];
+ "8.0.23" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-8-0-23.html"];
+ "8.0.22" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-8-0-22.html"];
+ "8.0.21" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-8-0-21.html"];
+ "8.0.20" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-8-0-20.html"];
+ "8.0.19" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-8-0-19.html"];
+ "8.0.18" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-8-0-18.html"];
+ "8.0.17" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-8-0-17.html"];
+ "8.0.15" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-8-0-15.html"];
+ "8.0.14" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-8-0-14.html"];
+ "8.0.13" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-8-0-13.html"];
+ "8.0.12" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-8-0-12.html"];
+ "8.0.11" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-8-0-11.html"];
+ "8.0.10" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-8-0-10.html"];
+ "8.0.9" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-8-0-9.html"];
+ "8.0.8" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-8-0-8.html"];
+ "8.0.7" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-8-0-7.html"];
+ "8.0.6" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-8-0-6.html"];
+ "8.0.5" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-8-0-5.html"];
+ "8.0.4" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-8-0-4.html"];
+ "8.0.3" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-8-0-3.html"];
+ "8.0.2" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-8-0-2.html"];
+ "8.0.1" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-8-0-1.html"];
+ 
+ "7.4.30" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-7-4-30.html"];
+ "7.4.29" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-7-4-29.html"];
+ "7.4.28" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-7-4-28.html"];
+ "7.4.27" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-7-4-27.html"];
+ "7.4.26" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-7-4-26.html"];
+ "7.4.25" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-7-4-25.html"];
+ "7.4.24" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-7-4-24.html"];
+ "7.4.23" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-7-4-23.html"];
+ "7.4.22" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-7-4-22.html"];
+ "7.4.21" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-7-4-21.html"];
+ "7.4.19" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-7-4-19.html"];
+ "7.4.18" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-7-4-18.html"];
+ "7.4.17" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-7-4-17.html"];
+ "7.4.16" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-7-4-16.html"];
+ "7.4.15" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-7-4-15.html"];
+ "7.4.14" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-7-4-14.html"];
+ "7.4.13" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-7-4-13.html"];
+ "7.4.12" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-7-4-12.html"];
+ "7.4.11" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-7-4-11.html"];
+ "7.4.10" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-7-4-10.html"];
+ "7.4.9" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-7-4-9.html"];
+ "7.4.8" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-7-4-8.html"];
+ "7.4.7" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-7-4-7.html"];
+ "7.4.6" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-7-4-6.html"];
+ "7.4.5" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-7-4-5.html"];
+ "7.4.4" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-7-4-4.html"];
+ "7.4.3" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-7-4-3.html"];
+ "7.4.2" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-7-4-2.html"];
+ "7.4.1" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-7-4-1.html"];
+ 
+ "7.3.21" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-7-3-21.html"];
+ "7.3.20" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-7-3-20.html"];
+ "7.3.19" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-7-3-19.html"];
+ "7.3.18" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-7-3-18.html"];
+ "7.3.17" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-7-3-17.html"];
+ "7.3.16" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-7-3-16.html"];
+ "7.3.15" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-7-3-15.html"];
+ "7.3.14" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-7-3-14.html"];
+ "7.3.13" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-7-3-13.html"];
+ "7.3.12" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-7-3-12.html"];
+ "7.3.11" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-7-3-11.html"];
+ "7.3.10" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-7-3-10.html"];
+ "7.3.9" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-7-3-9.html"];
+ "7.3.8" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-7-3-8.html"];
+ "7.3.7" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-7-3-7.html"];
+ "7.3.6" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-7-3-6.html"];
+ "7.3.5" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-7-3-5.html"];
+ "7.3.4" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-7-3-4.html"];
+ "7.3.3" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-7-3-3.html"];
+ "7.3.2" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-7-3-2.html"];
+ "7.3.1" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-7-3-1.html"];
+ 
+ "7.2.8" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-7-2-8.html"];
+ "7.2.7" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-7-2-7.html"];
+ "7.2.6" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-7-2-6.html"];
+ "7.2.5" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-7-2-5.html"];
+ "7.2.4" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-7-2-4.html"];
+ "7.2.3" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-7-2-3.html"];
+ "7.2.2" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-7-2-2.html"];
+ "7.2.1" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-7-2-1.html"];
+ 
+ "7.1.3" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-7-1-3.html"];
+ "7.1.2" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-7-1-2.html"];
+ "7.1.1" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-7-1-1.html"];
+ 
+ "7.0.3" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-7-0-3.html"];
+ "7.0.2" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-7-0-2.html"];
+ "7.0.1" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-7-0-1.html"];
+ 
+ "6.5.3" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-6-5-3.html"];
+ "6.5.2" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-6-5-2.html"];
+ "6.5.1" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-6-5-1.html"];
+ 
+ "6.4.2" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-6-4-2.html"];
+ "6.4.1" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-6-4-1.html"];
+ 
+ "6.3.2" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-6-3-2.html"];
+ "6.3.1" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-6-3-1.html"];
+ 
+ "6.2.1" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-6-2-1.html"];
+ 
+ "6.1.1" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-6-1-1.html"];
+ 
+ "Postgres-1.09" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-1-09.html"];
+ "Postgres-1.02" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-1-02.html"];
+ "Postgres-1.01" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-1-01.html"];
+ 
+ "Postgres95-0.03" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-0-03.html"];
+ "Postgres95-0.02" [fontsize=16, fontname="Helvetica", style="filled,rounded", color="grey90", URL="http://www.postgresql.org/docs/current/static/release-0-02.html"];
+
+/* Dates relations */
+
+"[ 1995 ]" -> "1995-05-01" -> "1995-05-25" -> "1995-07-21" -> "1995-09-05" -> "[ 1996 ]" -> "1996-02-23" -> "1996-08-01" -> "1996-11-04" -> "[ 1997 ]" -> "1997-01-29" -> "1997-06-08" -> "1997-07-22" -> "1997-10-02" -> "1997-10-17" -> "[ 1998 ]" -> "1998-03-01" -> "1998-03-23" -> "1998-04-07" -> "1998-10-30" -> "1998-12-18" -> "1998-12-20" -> "[ 1999 ]" -> "1999-06-09" -> "1999-07-15" -> "1999-09-15" -> "1999-10-13" -> "[ 2000 ]" -> "2000-05-08" -> "2000-06-01" -> "2000-06-05" -> "2000-11-11" -> "[ 2001 ]" -> "2001-04-13" -> "2001-05-05" -> "2001-05-11" -> "2001-08-15" -> "[ 2002 ]" -> "2002-02-04" -> "2002-03-21" -> "2002-08-23" -> "2002-10-01" -> "2002-11-27" -> "2002-12-18" -> "[ 2003 ]" -> "2003-01-30" -> "2003-02-04" -> "2003-05-22" -> "2003-07-24" -> "2003-11-17" -> "2003-12-03" -> "2003-12-22" -> "[ 2004 ]" -> "2004-03-02" -> "2004-03-08" -> "2004-06-14" -> "2004-08-16" -> "2004-08-18" -> "2004-10-22" -> "[ 2005 ]" -> "2005-01-19" -> "2005-01-31" -> "2005-04-07" -> "2005-05-09" -> "2005-10-04" -> "2005-11-08" -> "2005-12-12" -> "[ 2006 ]" -> "2006-01-09" -> "2006-02-14" -> "2006-05-23" -> "2006-10-16" -> "2006-12-05" -> "[ 2007 ]" -> "2007-01-08" -> "2007-02-05" -> "2007-02-07" -> "2007-04-23" -> "2007-09-17" -> "[ 2008 ]" -> "2008-01-07" -> "2008-02-04" -> "2008-03-17" -> "2008-06-12" -> "2008-09-22" -> "2008-11-03" -> "[ 2009 ]" -> "2009-02-02" -> "2009-03-16" -> "2009-07-01" -> "2009-09-09" -> "2009-12-14" -> "[ 2010 ]" -> "2010-03-15" -> "2010-05-17" -> "2010-09-20" -> "2010-10-04" -> "2010-12-16" -> "[ 2011 ]" -> "2011-01-31" -> "2011-04-18" -> "2011-09-12" -> "2011-09-26" -> "2011-12-05" -> "[ 2012 ]" -> "2012-02-27";
+
+
+/* Versions relations */
+
+"Postgres95-0.03" -> "Postgres-1.0";
+"Postgres-1.0" -> "6.0";
+"6.0"  -> "6.1" ;
+"6.1" -> "6.2"; 
+"6.2" -> "6.3"; 
+"6.3" -> "6.4"; 
+"6.4" -> "6.5";
+"6.5" -> "7.0";
+"7.0" -> "7.1"; 
+"7.1" -> "7.2"; 
+"7.2" -> "7.3"; 
+"7.3" -> "7.4";
+"7.4" -> "8.0";
+"8.0" -> "8.1";
+"8.1" -> "8.2";
+"8.2" -> "8.3";
+"8.3" -> "8.4";
+"8.4" -> "9.0";
+"9.0" -> "9.1";
+
+ subgraph 001{
+"Postgres95-0.01" -> "Postgres95-0.02" -> "Postgres95-0.03";
+}
+
+ subgraph 10{
+"Postgres-1.0" -> "Postgres-1.01" -> "Postgres-1.02" -> "Postgres-1.09";
+}
+
+ subgraph 61{
+"6.1" -> "6.1.1";
+}
+
+ subgraph 62{
+"6.2" -> "6.2.1";
+}
+
+ subgraph cluster_63{
+"6.3" -> "6.3.1" -> "6.3.2";
+}
+
+ subgraph 64{
+"6.4" -> "6.4.1" -> "6.4.2";
+}
+
+ subgraph 65{
+"6.5" -> "6.5.1" -> "6.5.2" -> "6.5.3";
+}
+
+subgraph 70{
+"7.0" -> "7.0.1" -> "7.0.2" -> "7.0.3";
+}
+
+subgraph 71{
+"7.1" -> "7.1.1" -> "7.1.2" -> "7.1.3";
+}
+
+subgraph 72{
+"7.2" -> "7.2.1" -> "7.2.2" -> "7.2.3" -> "7.2.4" -> "7.2.5" -> "7.2.6" -> "7.2.7" -> "7.2.8" ;
+}
+
+subgraph 73{
+"7.3" -> "7.3.1" -> "7.3.2" -> "7.3.3" -> "7.3.4" -> "7.3.5" -> "7.3.6" -> "7.3.7" -> "7.3.8" -> "7.3.9" -> "7.3.10" -> "7.3.11" -> "7.3.12" -> "7.3.13" -> "7.3.14" -> "7.3.15" -> "7.3.16" -> "7.3.17" -> "7.3.18" -> "7.3.19" -> "7.3.20" -> "7.3.21";
+}
+
+subgraph 74{
+"7.4" -> "7.4.1" -> "7.4.2" -> "7.4.3" -> "7.4.4" -> "7.4.5" -> "7.4.6" -> "7.4.7" -> "7.4.8" -> "7.4.9" -> "7.4.10" -> "7.4.11" -> "7.4.12" -> "7.4.13" -> "7.4.14" -> "7.4.15" -> "7.4.16" -> "7.4.17" -> "7.4.18" -> "7.4.19" -> "7.4.21" -> "7.4.22" -> "7.4.23" -> "7.4.24" -> "7.4.25" -> "7.4.26" -> "7.4.27" -> "7.4.28" -> "7.4.29" -> "7.4.30";
+}
+
+subgraph 80{
+"8.0" -> "8.0.1" -> "8.0.2" -> "8.0.3" -> "8.0.4" -> "8.0.5" -> "8.0.6" -> "8.0.7" -> "8.0.8" -> "8.0.9" -> "8.0.10" -> "8.0.11" -> "8.0.12" -> "8.0.13" -> "8.0.14" -> "8.0.15" -> "8.0.17" -> "8.0.18" -> "8.0.19" -> "8.0.20" -> "8.0.21" -> "8.0.22" -> "8.0.23" -> "8.0.24" -> "8.0.25" -> "8.0.26";
+}
+
+subgraph 81{
+"8.1" -> "8.1.1" -> "8.1.2" -> "8.1.3" -> "8.1.4" -> "8.1.5" -> "8.1.6" -> "8.1.7" -> "8.1.8" -> "8.1.9" -> "8.1.10" -> "8.1.11" -> "8.1.13" -> "8.1.14" -> "8.1.15" -> "8.1.16" -> "8.1.17" -> "8.1.18" -> "8.1.19" -> "8.1.20" -> "8.1.21" -> "8.1.22" -> "8.1.23";
+}
+
+subgraph 82{
+"8.2" -> "8.2.1" -> "8.2.2" -> "8.2.3" -> "8.2.4" -> "8.2.5" -> "8.2.6" -> "8.2.7" -> "8.2.9" -> "8.2.10" -> "8.2.11" -> "8.2.12" -> "8.2.13" -> "8.2.14" -> "8.2.15" -> "8.2.16" -> "8.2.17" -> "8.2.18" -> "8.2.19" -> "8.2.20" -> "8.2.21" -> "8.2.22" -> "8.2.23";
+}
+
+subgraph 83{
+"8.3" -> "8.3.1" -> "8.3.3" -> "8.3.4" -> "8.3.5" -> "8.3.6" -> "8.3.7" -> "8.3.8" -> "8.3.9" -> "8.3.10" -> "8.3.11" -> "8.3.12" -> "8.3.13" -> "8.3.14" -> "8.3.15" -> "8.3.16" -> "8.3.17" -> "8.3.18"; 
+}
+
+subgraph 84{
+"8.4" -> "8.4.1" -> "8.4.2" -> "8.4.3" -> "8.4.4" -> "8.4.5" -> "8.4.6" -> "8.4.7" -> "8.4.8" -> "8.4.9" -> "8.4.10" -> "8.4.11";
+}
+
+subgraph 90{
+"9.0" -> "9.0.1" -> "9.0.2" -> "9.0.3" -> "9.0.4" -> "9.0.5" -> "9.0.6" -> "9.0.7";
+}
+
+subgraph 91{
+"9.1" -> "9.1.1" -> "9.1.2" -> "9.1.3";
+}
+
+}
