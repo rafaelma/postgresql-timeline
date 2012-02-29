@@ -8,7 +8,7 @@ Author: Rafael Martinez Guerrero / PostgreSQL-es
 E-mail: rafael@postgresql.org.es
 Web: http://www.postgresql.org.es/
 
-GIT repository: http://www.github.org/rafaelma/postgresql_timeline
+GIT repository: http://www.github.org/rafaelma/postgresql-timeline
   
 The intention of this project is to create a diagram with
 information about the timeline of the postgreSQL project.
